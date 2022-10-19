@@ -8,6 +8,7 @@ const {port} = require('./config')
 //* Routes
 const userRouter = require('./users/users.router')
 const authRouter = require('./auth/auth.router')
+const initModels = require('./models/initModels')
 
 //? initial Configs
 const app = express()
@@ -29,6 +30,8 @@ db.sync()
     .catch(err => {
         console.log(err)
     })
+    
+initModels()
 
 app.get('/', (req, res) => {
     res.status(200).json({
