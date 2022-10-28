@@ -30,7 +30,7 @@ db.sync()
     .catch(err => {
         console.log(err)
     })
-    
+
 initModels()
 
 app.get('/', (req, res) => {

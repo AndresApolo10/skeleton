@@ -29,4 +29,4 @@ router.route('/:id')
         adminValidate,
         userServices.deleteUser)
 
-module.exports = router    
+module.exports = router   
